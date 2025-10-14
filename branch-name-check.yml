@@ -1,0 +1,27 @@
+name: Check branch name on push
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate branch name
+        run: |
+          branch_name="${GITHUB_REF_NAME}"
+          echo "Branch name: $branch_name"
+
+          branch_regex="^(bugfix/|hotfix/|feature/|release/)"
+
+          if [[ "$branch_name" =~ $branch_regex ]]; then
+            echo "✅ Branch name matches the required pattern."
+          else
+            echo "❌ Branch name does not match the required pattern. Exiting..."
+            exit 1
+          fi
+        shell: bash
