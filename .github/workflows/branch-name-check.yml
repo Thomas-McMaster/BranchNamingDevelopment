@@ -19,9 +19,9 @@ jobs:
           branch_regex="^(bugfix/|hotfix/|feature/|release/)"
 
           if [[ "$branch_name" =~ $branch_regex ]]; then
-            echo "✅ Branch name matches the required pattern."
+            echo "Branch name matches the required pattern."
           else
-            echo "❌ Branch name does not match the required pattern. Exiting..."
+            echo "Branch name does not match the required pattern. Exiting..."
             exit 1
           fi
         shell: bash
