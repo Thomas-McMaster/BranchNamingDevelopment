@@ -1,4 +1,4 @@
-name: Check branch name on push
+name: Check branch name on push and if it fits with what we want.
 
 on:
   push:
