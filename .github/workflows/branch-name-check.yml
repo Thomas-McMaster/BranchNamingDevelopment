@@ -19,7 +19,7 @@ jobs:
           branch_regex="^(bugfix/|hotfix/|feature/|release/)"
 
           if [[ "$branch_name" =~ $branch_regex ]]; then
-            echo "Branch name matches the required pattern."
+            echo "Branch name matches the required pattern for naming."
           else
             echo "Branch name does not match the required pattern. Now exiting script."
             exit 1
