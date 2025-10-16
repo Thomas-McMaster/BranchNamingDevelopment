@@ -21,7 +21,7 @@ jobs:
           if [[ "$branch_name" =~ $branch_regex ]]; then
             echo "Branch name matches the required pattern for naming."
           else
-            echo "Branch name does not match the required pattern. Now exiting script."
+            echo "Branch name does not match the required pattern now. Now exiting script."
             exit 1
           fi
         shell: bash
